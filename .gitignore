@@ -216,3 +216,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# PKGBUILD
+/.venv/
+/pkg/
+/*.pkg.tar.zst
+/*.pkg.tar.zst.sig
+/bin/phx-tonal-palette
+/src/*.build
+/src/*.dist
+/src/*.onefile-build
