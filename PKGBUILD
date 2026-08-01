@@ -1,5 +1,5 @@
 pkgname=phx-tonal-palette
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="sRGB/Display P3/Rec 2020 tonal palette based on Material You tones in HCT space"
 arch=('any')

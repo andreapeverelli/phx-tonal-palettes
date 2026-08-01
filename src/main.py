@@ -5,6 +5,14 @@ from coloraide.spaces.hct import HCT
 from coloraide.distance.delta_e_hct import DEHCT
 from coloraide.gamut.fit_hct_chroma import HCTChroma
 
+if sys.argv[1] == "--version":
+    sys.stdout.write("PHX-TONAL-PALETTE v1.0.1\n")
+    sys.exit(0)
+
+if sys.argv[1] == "--help":
+    sys.stdout.write("PHX-TONAL-PALETTE\n\nCommand structure:\n | phx-tonal-palette hct_hue hct_chroma\n | phx-tonal-palette --version\n | phx-tonal-palette --help\n")
+    sys.exit(0)
+
 class Color(Base): ...
 
 Color.register([HCT(), DEHCT(), HCTChroma()])

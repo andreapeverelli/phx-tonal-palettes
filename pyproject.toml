@@ -1,6 +1,6 @@
 [project]
 name = "phx-tonal-palette"
-version = "1.0.0"
+version = "1.0.1"
 description = "sRGB/Display P3/Rec 2020 tonal palette based on Material You tones in HCT space"
 readme = "README"
 license = "GPL-3.0"
