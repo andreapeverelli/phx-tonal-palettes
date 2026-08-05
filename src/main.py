@@ -5,13 +5,33 @@ from coloraide.spaces.hct import HCT
 from coloraide.distance.delta_e_hct import DEHCT
 from coloraide.gamut.fit_hct_chroma import HCTChroma
 
+def badArguments():
+    sys.stdout.write("""\
+Bad arguments.
+Try 'phx-tonal-palette --help' for command structure.
+""")
+    sys.exit(1)
+
+if len(sys.argv) < 2:
+    badArguments()
+
 if sys.argv[1] == "--version":
-    sys.stdout.write("PHX-TONAL-PALETTE v1.0.1\n")
+    sys.stdout.write("PHX-TONAL-PALETTE v1.0.2\n")
     sys.exit(0)
 
 if sys.argv[1] == "--help":
-    sys.stdout.write("PHX-TONAL-PALETTE\n\nCommand structure:\n | phx-tonal-palette hct_hue hct_chroma\n | phx-tonal-palette --version\n | phx-tonal-palette --help\n")
+    sys.stdout.write("""\
+PHX-TONAL-PALETTE
+
+Command structure:
+    phx-tonal-palette hct_hue hct_chroma
+    phx-tonal-palette --version
+    phx-tonal-palette --help
+""")
     sys.exit(0)
+
+if len(sys.argv) < 3:
+    badArguments()
 
 class Color(Base): ...
 
