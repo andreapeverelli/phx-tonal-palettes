@@ -3,6 +3,15 @@ All notable changes to this project will be documented in this file.
 The format is based on Keep a Changelog,
 and this project adheres to Semantic Versioning.
 
+## [1.0.3] 2026-08-08
+
+## Updated
+ - added HCT output
+ - added more tones
+ - output fixes
+ - README.md
+ - Help output
+
 ## [1.0.2] 2026-08-05
 
 ### Added
