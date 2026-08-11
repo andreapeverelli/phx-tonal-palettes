@@ -2,7 +2,7 @@ pkgname=phx-tonal-palettes
 pkgver=2.0.0
 pkgrel=1
 pkgdesc="sRGB/Display P3/Rec 2020 tonal palettes based on Material You tones in HCT space."
-arch=('any')
+arch=('x86_64' 'aarch64')
 url="https://github.com/andreapeverelli/phx-tonal-palettes.git"
 license=('GPL-3.0')
 
@@ -10,6 +10,8 @@ depends=(
 	'python'
 	'python-pip'
 )
+
+options=(!debug)
 
 build() {
 	python -m venv ../.venv/phx-tonal-palettes/
