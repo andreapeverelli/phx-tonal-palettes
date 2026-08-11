@@ -1,9 +1,9 @@
-# phx-tonal-palette
-sRGB/Display P3/Rec 2020 tonal palette based on Material You tones in HCT space.
+# phx-tonal-palettes
+sRGB/Display P3/Rec 2020 tonal palettes based on Material You tones in HCT space.
 
 ## Install from Source
 ```bash
-git clone https://github.com/andreapeverelli/phx-tonal-palette.git
+git clone https://github.com/andreapeverelli/phx-tonal-palettes.git
 makepkg -si
 ```
 
@@ -16,11 +16,11 @@ sudo pacman-key --add /tmp/phx-repo-key.asc
 sudo pacman-key --lsign-key CAF1FE155FED7B2F6E05EC6BD88ABED0A94852EC
 
 # Update Repositories and install phx-tools
-sudo pacman -Syy phx-tonal-palette
+sudo pacman -Syy phx-tonal-palettes
 ```
 
 ## Usage
 The main purpose is to be used from PHX-CLI generate:palette but it can also be run independently with this command:
 ```bash
-phx-tonal-palette HCT_HUE HCT_CHROMA
+phx-tonal-palettes --help
 ```

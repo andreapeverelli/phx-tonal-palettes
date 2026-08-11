@@ -222,7 +222,7 @@ __marimo__/
 /pkg/
 /*.pkg.tar.zst
 /*.pkg.tar.zst.sig
-/bin/phx-tonal-palette
+/bin/phx-tonal-palettes
 /src/*.build
 /src/*.dist
 /src/*.onefile-build

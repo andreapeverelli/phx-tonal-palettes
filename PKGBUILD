@@ -1,9 +1,9 @@
-pkgname=phx-tonal-palette
-pkgver=1.0.3
+pkgname=phx-tonal-palettes
+pkgver=2.0.0
 pkgrel=1
-pkgdesc="sRGB/Display P3/Rec 2020 tonal palette based on Material You tones in HCT space."
+pkgdesc="sRGB/Display P3/Rec 2020 tonal palettes based on Material You tones in HCT space."
 arch=('any')
-url="https://github.com/andreapeverelli/phx-tonal-palette.git"
+url="https://github.com/andreapeverelli/phx-tonal-palettes.git"
 license=('GPL-3.0')
 
 depends=(
@@ -12,14 +12,14 @@ depends=(
 )
 
 build() {
-	python -m venv ../.venv/phx-tonal-palette/
-	source ../.venv/phx-tonal-palette/bin/activate
+	python -m venv ../.venv/phx-tonal-palettes/
+	source ../.venv/phx-tonal-palettes/bin/activate
 	pip install coloraide nuitka
-	python -m nuitka --onefile --standalone --output-filename=../bin/phx-tonal-palette main.py
+	python -m nuitka --onefile --standalone --output-filename=../bin/phx-tonal-palettes main.py
 }
 
 package() {
 	install -dm755 "$pkgdir/usr/share/$pkgname"
 	cp ../LICENSE $pkgdir/usr/share/$pkgname
-	install -Dm755 ../bin/phx-tonal-palette $pkgdir/usr/bin/phx-tonal-palette
+	install -Dm755 ../bin/phx-tonal-palettes $pkgdir/usr/bin/phx-tonal-palettes
 }
