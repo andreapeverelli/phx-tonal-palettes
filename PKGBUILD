@@ -14,7 +14,7 @@ makedepends=(
 options=(!debug)
 
 build() {
-	mkdir ../bin
+	mkdir -p ../bin
 	mkdir -p ../.venv/phx-tonal-palettes
 	python -m venv ../.venv/phx-tonal-palettes/
 	source ../.venv/phx-tonal-palettes/bin/activate
