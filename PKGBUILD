@@ -2,18 +2,20 @@ pkgname=phx-tonal-palettes
 pkgver=2.0.0
 pkgrel=1
 pkgdesc="sRGB/Display P3/Rec 2020 tonal palettes based on Material You tones in HCT space."
-arch=('x86_64' 'aarch64')
+arch=("x86_64" "aarch64")
 url="https://github.com/andreapeverelli/phx-tonal-palettes.git"
-license=('GPL-3.0')
+license=("GPL-3.0")
 
-depends=(
-	'python'
-	'python-pip'
+makedepends=(
+	"python"
+	"python-pip"
 )
 
 options=(!debug)
 
 build() {
+	mkdir ../bin
+	mkdir -p ../.venv/phx-tonal-palettes
 	python -m venv ../.venv/phx-tonal-palettes/
 	source ../.venv/phx-tonal-palettes/bin/activate
 	pip install coloraide nuitka
